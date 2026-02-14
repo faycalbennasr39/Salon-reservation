@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation - Elite HairCut</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💈 Elite HairCut</h1>
+            <p class="subtitle">Réservez votre rendez-vous en ligne</p>
+        </header>
+
+        <main>
+            <form id="reservationForm">
+                <div class="form-group">
+                    <label for="prenom">Prénom *</label>
+                    <input type="text" id="prenom" name="prenom" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nom">Nom *</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telephone">Téléphone *</label>
+                    <input type="tel" id="telephone" name="telephone" required placeholder="06 12 34 56 78">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="prestation">Prestation *</label>
+                    <select id="prestation" name="prestation" required>
+                        <option value="">-- Choisissez une prestation --</option>
+                        <option value="Coupe homme 20€">Coupe homme 20€</option>
+                        <option value="Coupe enfant 15€ (-12ans)">Coupe enfant 15€ (-12ans)</option>
+                        <option value="Coupe + Barbe 25€">Coupe + Barbe 25€</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Date *</label>
+                    <select id="date" name="date" required>
+                        <option value="">-- Chargement des dates... --</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="heure">Heure *</label>
+                    <select id="heure" name="heure" required disabled>
+                        <option value="">-- Sélectionnez d'abord une date --</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="submitBtn">
+                    <span id="btnText">Réserver mon rendez-vous</span>
+                    <span id="btnLoader" class="loader" style="display: none;">⏳</span>
+                </button>
+            </form>
+
+            <div id="message" class="message" style="display: none;"></div>
+        </main>
+
+        <footer>
+            <p>📍 Elite HairCut</p>
+            <p>Du lundi au samedi • 9h-19h</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
